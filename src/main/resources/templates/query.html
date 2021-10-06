@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Query</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="text-center">
+    <h2 th:if="${error}">
+        <div class="btn btn-warning">
+            <a th:text="'Մուտքագրման հրամանը սխալ է'">VALUE</a>
+        </div>
+
+    </h2>
+</div>
+<form class="text-center" action="/api/v1/sql_query" method="post">
+    <br><br>
+    <h5 class="text-center">Մուտքագրել հրամանը</h5>
+        <p><b>SQL հրաման</b></p>
+        <p><textarea rows="1" cols="45" name="query"></textarea></p>
+        <button class="btn btn-success" type="submit">Կատարել</button>
+    <br><br>
+    <h2 th:if="${result}">
+        <div class="btn btn-warning">
+            <a th:text="${result}">VALUE</a>
+        </div>
+    </h2>
+</form>
+</body>
+</html>
