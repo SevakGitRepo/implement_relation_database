@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class SerializationUtil {
 
-    private static final String FILE_NAME = "Sata";
+    private static final String FILE_NAME = "Data";
 
     public static void serialization(ArrayList<User> users) {
         try(FileOutputStream fileOutputStream = new FileOutputStream(FILE_NAME);
